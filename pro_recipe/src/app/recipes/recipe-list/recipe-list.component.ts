@@ -9,7 +9,10 @@ import { Recipe } from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     // dummy recipe
-    new Recipe('A test', 'this is a dummy recipe', 'https://i5.walmartimages.com/asr/c9cbc1c6-1fd1-4cb7-a134-bf6584ceba26.e20c078b6932862793078e7f792f8f1e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')
+    new Recipe('A test Recipe', 'this is a dummy recipe', 
+    'https://i5.walmartimages.com/asr/c9cbc1c6-1fd1-4cb7-a134-bf6584ceba26.e20c078b6932862793078e7f792f8f1e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF'),
+    new Recipe('A test Recipe', 'this is a dummy recipe', 
+    'https://i5.walmartimages.com/asr/c9cbc1c6-1fd1-4cb7-a134-bf6584ceba26.e20c078b6932862793078e7f792f8f1e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')
   ];
 
   constructor() { }
