@@ -4,25 +4,11 @@
 <hr>
 <div >
     <div  >
-        <a 
-        href="#" 
-        
-        *ngFor = "let recipeii of recipes">
-            <div class = "container">
-                <h4>{{ recipeii.name }}</h4>
-                <p>{{ recipeii.description}}</p>
-            
-            <span >
-                <img 
-                
-                [src]="recipeii.imagePath"
-                alt="{{ recipeii.name }}" 
-                style = "max-height: 50px">
-            </span>
-            </div>
-        </a>
-        <app-recipe-item></app-recipe-item>
+        <app-recipe-item
+            *ngFor = "let recipeEle of recipes"
+            [recipe]="recipeEle"
+            (recipeSelected)="onRecipeSelected(recipeEle)"
+        ></app-recipe-item>
     </div>
     
 </div>
-<hr>

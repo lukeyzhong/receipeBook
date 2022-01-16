@@ -1,8 +1,11 @@
 <div>
-    <img src="" alt="">
+    <img 
+    [src]="recipe.imagePath" 
+    alt=" recipe.name "
+    style="max-height: 200px;">
 </div>
 <div>
-    <h2>Recipe Information/Details</h2>
+    <h2>{{ recipe.name }}</h2>
 </div>
 <div>
     <button
@@ -17,8 +20,8 @@
     </ul>
 </div>
 <div>
-
+    {{ recipe.description }}
 </div>
 <div>
-    
+
 </div>
