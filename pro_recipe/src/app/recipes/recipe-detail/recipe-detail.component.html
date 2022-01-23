@@ -7,13 +7,8 @@
 <div>
     <h2>{{ recipe.name }}</h2>
 <div appDropdown>
-    <button
-        type = "button"
-        class = "">
-    Manage Recipe
-    </button>
     <ul>
-        <li><a href="#">Add to list</a></li>
+        <li><a href="#" (click)="onAddToShoppingList" style="cursor: pointer;" >Add to shopping list</a></li>
         <li><a href="#">Edit recipe</a></li>
         <li><a href="#">Delete recipe</a></li>
     </ul>
@@ -21,5 +16,9 @@
     {{ recipe.description }}
 </div>
 <div>
-
+    <ul>
+        <li
+            *ngFor="let ingredient of recipe.ingredients"
+        >{{ingredient.name}} - {{ingredient.amount}}</li>   
+    </ul>
 </div>
