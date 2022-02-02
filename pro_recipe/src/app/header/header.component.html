@@ -3,16 +3,16 @@
 </div>
 <div>
     <ul>
-        <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
-        <li><a href="#" (click)="onSelect('shopping-list')">Shopping List</a></li>
+        <li routerLinkActive="active"><a routerLink="/recipes" >Recipes</a></li>
+        <li routerLinkActive="active"><a routerLink="/shopping-list" >Shopping List</a></li>
     </ul>
     <ul>
         <li appDropdown>
-            <a href="#">Manage</a>
+            <a >Manage</a>
         </li>
         <ul>
-            <li><a href="#">Save Data</a></li>
-            <li><a href="#">Fetch Data</a></li>
+            <li><a style="cursor: pointer">Save Data</a></li>
+            <li><a style="cursor: pointer">Fetch Data</a></li>
         </ul>
     </ul>
 </div>

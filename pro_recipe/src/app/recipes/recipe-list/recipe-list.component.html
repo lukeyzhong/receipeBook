@@ -1,12 +1,13 @@
 <div>
-    <button>New Recipe</button>
+    <button (click)="onNewRecipe()">New Recipe </button>
 </div>
 <hr>
 <div >
     <div  >
         <app-recipe-item
-            *ngFor = "let recipeEle of recipes"
-            [recipe]="recipeEle"   
+            *ngFor = "let recipeEle of recipes; let i = index"
+            [recipe]="recipeEle"  
+            [index]="i"
         ></app-recipe-item>
     </div>
     
