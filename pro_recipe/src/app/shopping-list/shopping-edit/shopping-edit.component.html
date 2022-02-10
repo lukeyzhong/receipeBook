@@ -1,21 +1,27 @@
 <div>
-    <form action="">
+    <form (ngSubmit)="onAddItem(f)" #f="ngForm">
         <div>
             <label for="name">Name</label>
             <input 
             type="text" 
             id = "name"
-            #nameInput>
+            name="name"
+            ngModel
+            required>
         </div>
         <div>
             <label for="amount">Amount</label>
             <input 
             type="number" 
             id = "amount"
-            #amountInput>
+            name="amount"
+            ngModel
+            required
+            pattern="^[1-9]+[0-9]*$">
         </div>
         <div>
-            <button type="button" (click)="onAddItem()">Add</button>
+            <button type="submit" [disabled]="!f.valid">
+                {{ editMode ? 'Update' : 'Add'}}</button>
             <button type="button" >Delete</button>
             <button type="button" >Clear</button>
         </div>
