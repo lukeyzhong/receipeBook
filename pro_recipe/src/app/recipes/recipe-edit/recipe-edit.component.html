@@ -4,7 +4,7 @@
         <button 
         type="submit"
         [disabled]="!recipeForm.valid">Save</button>
-        <button type="button">Cancel</button>
+        <button type="button" (click)="onCancel()">Cancel</button>
     </div>
     <div>
         <label for="name">Name</label>
@@ -16,10 +16,11 @@
         <label for="imagePath">Image Url</label>
         <input type="text" 
         id="imagePath"
-        formControlName="imagePath">
+        formControlName="imagePath"
+        #imagePath>
     </div>
     <div>
-        <img src="">
+        <img [src]="imagePath.value">
     </div>
     <div>
         <label for="description">Description</label>
@@ -41,7 +42,9 @@
                 formControlName="amount">
             </div>
             <div>
-                <button>X</button>
+                <button
+                type="button"
+                (click)="onDeleteIngredient(i)">Delete</button>
             </div>
         </div>
         <hr>
